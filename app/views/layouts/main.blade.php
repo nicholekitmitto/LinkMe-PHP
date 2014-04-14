@@ -24,10 +24,10 @@
           <!-- Right Nav Section -->
           <ul class="right show-for-large-up">
             @if(!Auth::check())
-                    <li>{{ HTML::link('users/register', 'Register') }}</li>
-                    <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
-                @else
-                    <li class="active">{{ HTML::link('users/logout', 'Logout') }}</li>
+              <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
+              <li>{{ HTML::link('users/register', 'Register') }}</li>
+            @else
+              <li class="active">{{ HTML::link('users/logout', 'Logout') }}</li>
                 @endif
             <li class="has-dropdown not-click">
               <a href="#">Hello</a>
@@ -67,7 +67,7 @@
 
 
     <div class="row">
-      <div class="small-6 large-centered columns">
+      <div class="small-8 large-centered columns">
         @if(Session::has('message'))
         <p class="alert-box">{{ Session::get('message') }}</p>
         @endif

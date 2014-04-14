@@ -1,1 +1,26 @@
+html h1, h2, h3, h4, h5, h6, p {
+  color: #FFF;
+}
 
+body {
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.dashboard-options {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 20%;
+  float: left;
+}
+
+.your-questions {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  width:
+}
