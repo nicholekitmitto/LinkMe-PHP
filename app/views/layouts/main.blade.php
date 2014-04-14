@@ -60,14 +60,6 @@
               </ul>
             </li>
           </ul>
-
-          <!-- Left Nav Section -->
-          <ul class="left show-for-large-up">
-            <li><a href="forum.php">Forum</a>
-            </li>
-            <li><a href="submission.php">Ask</a>
-            </li>
-          </ul>
         </section>
       </nav>
     </div>
@@ -76,7 +68,7 @@
     <div class="row">
       <div class="small-6 large-centered columns">
         @if(Session::has('message'))
-        <p class="alert-box alert">{{ Session::get('message') }}</p>
+        <p class="alert-box">{{ Session::get('message') }}</p>
         @endif
 
         {{ $content }}
