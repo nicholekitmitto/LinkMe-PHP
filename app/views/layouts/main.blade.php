@@ -10,6 +10,60 @@
   </head>
 
   <body>
+    <div class="fixed">
+      <nav class="top-bar" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="index.php">LinkMe</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
+          </li>
+        </ul>
+          <section class="top-bar-section">
 
+        <!-- Right Nav Section -->
+        <ul class="right show-for-large-up">
+          <li class="active">
+            <a href="#">Login</a>
+          </li>
+          <li>{{ HTML::link('users/register', 'Register') }}</li>
+          <li>{{ HTML::link('users/login', 'Login') }}</li> 
+          <li class="has-dropdown not-click">
+            <a href="#">Hello</a></h1>
+            <ul class="dropdown">
+              <li class="title back js-generated">
+                <h5><a href="javascript:void(0)">Back</a></h5>
+              </li>
+              <li><a href="#">My Profile</a></li>
+              <li>
+                  <a href="#">Edit Profile</a><li>
+              <li><a href="#">My Questions</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="right hide-for-large-up">
+          <li class="active"><a href="#">Right Button</a>
+          </li>
+          <li class="has-dropdown not-click">
+            <a href="#">Right Dropdown</a>
+            <ul class="dropdown">
+              <li class="title back js-generated">
+                <h5><a href="javascript:void(0)">Back</a></h5>
+              </li>
+              <li><a href="#">First link in dropdown</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left show-for-large-up">
+          <li><a href="forum.php">Forum</a></li>
+          <li><a href="submission.php">Ask</a></li>
+        </ul>
+      </section>
+    </nav>
+</div>
   </body>
 </html>
