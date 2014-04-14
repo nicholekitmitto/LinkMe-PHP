@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="fixed">
+    <div>
       <nav class="top-bar" data-topbar="">
         <ul class="title-area">
           <li class="name">
@@ -19,51 +19,68 @@
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
           </li>
         </ul>
-          <section class="top-bar-section">
+        <section class="top-bar-section">
 
-        <!-- Right Nav Section -->
-        <ul class="right show-for-large-up">
-          <li class="active">
-            <a href="#">Login</a>
-          </li>
-          <li>{{ HTML::link('users/register', 'Register') }}</li>
-          <li>{{ HTML::link('users/login', 'Login') }}</li> 
-          <li class="has-dropdown not-click">
-            <a href="#">Hello</a></h1>
-            <ul class="dropdown">
-              <li class="title back js-generated">
-                <h5><a href="javascript:void(0)">Back</a></h5>
+          <!-- Right Nav Section -->
+          <ul class="right show-for-large-up">
+            <li class="active">
+              <a href="#">Login</a>
+            </li>
+            <li>{{ HTML::link('users/register', 'Register') }}</li>
+            <li>{{ HTML::link('users/login', 'Login') }}</li>
+            <li class="has-dropdown not-click">
+              <a href="#">Hello</a>
+              </h1>
+              <ul class="dropdown">
+                <li class="title back js-generated">
+                  <h5><a href="javascript:void(0)">Back</a></h5>
+                </li>
+                <li><a href="#">My Profile</a>
+                </li>
+                <li>
+                  <a href="#">Edit Profile</a>
+                  <li>
+                    <li><a href="#">My Questions</a>
+                    </li>
+              </ul>
               </li>
-              <li><a href="#">My Profile</a></li>
-              <li>
-                  <a href="#">Edit Profile</a><li>
-              <li><a href="#">My Questions</a></li>
-            </ul>
-          </li>
-        </ul>
+          </ul>
 
-        <ul class="right hide-for-large-up">
-          <li class="active"><a href="#">Right Button</a>
-          </li>
-          <li class="has-dropdown not-click">
-            <a href="#">Right Dropdown</a>
-            <ul class="dropdown">
-              <li class="title back js-generated">
-                <h5><a href="javascript:void(0)">Back</a></h5>
-              </li>
-              <li><a href="#">First link in dropdown</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          <ul class="right hide-for-large-up">
+            <li class="active"><a href="#">Right Button</a>
+            </li>
+            <li class="has-dropdown not-click">
+              <a href="#">Right Dropdown</a>
+              <ul class="dropdown">
+                <li class="title back js-generated">
+                  <h5><a href="javascript:void(0)">Back</a></h5>
+                </li>
+                <li><a href="#">First link in dropdown</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
 
-        <!-- Left Nav Section -->
-        <ul class="left show-for-large-up">
-          <li><a href="forum.php">Forum</a></li>
-          <li><a href="submission.php">Ask</a></li>
-        </ul>
-      </section>
-    </nav>
-</div>
+          <!-- Left Nav Section -->
+          <ul class="left show-for-large-up">
+            <li><a href="forum.php">Forum</a>
+            </li>
+            <li><a href="submission.php">Ask</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+
+    <div class="row">
+      <div class="small-6 large-centered columns">
+        @if(Session::has('message'))
+        <p class="alert-box alert">{{ Session::get('message') }}</p>
+        @endif
+
+        {{ $content }}
+      </div>
+    </div>
   </body>
 </html>
