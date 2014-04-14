@@ -14,7 +14,7 @@
       <nav class="top-bar" data-topbar="">
         <ul class="title-area">
           <li class="name">
-            <h1><a href="index.php">LinkMe</a></h1>
+            <h1><a href="dashboard">LinkMe</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
           </li>
@@ -23,11 +23,12 @@
 
           <!-- Right Nav Section -->
           <ul class="right show-for-large-up">
-            <li class="active">
-              <a href="#">Login</a>
-            </li>
-            <li>{{ HTML::link('users/register', 'Register') }}</li>
-            <li>{{ HTML::link('users/login', 'Login') }}</li>
+            @if(!Auth::check())
+                    <li>{{ HTML::link('users/register', 'Register') }}</li>
+                    <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
+                @else
+                    <li class="active">{{ HTML::link('users/logout', 'Logout') }}</li>
+                @endif
             <li class="has-dropdown not-click">
               <a href="#">Hello</a>
               </h1>
@@ -40,7 +41,7 @@
                 <li>
                   <a href="#">Edit Profile</a>
                   <li>
-                    <li><a href="#">My Questions</a>
+                    <li><a href="dashboard">Dashboard</a>
                     </li>
               </ul>
               </li>

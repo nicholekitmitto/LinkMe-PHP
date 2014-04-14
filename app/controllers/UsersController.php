@@ -49,5 +49,10 @@ class UsersController extends BaseController {
     $this->layout->content = View::make('users.dashboard');
   }
 
+  public function getLogout() {
+    Auth::logout();
+    return Redirect::to('users/login')->with('message', 'You logged out successfully!');
+  }
+
 }
 ?>
