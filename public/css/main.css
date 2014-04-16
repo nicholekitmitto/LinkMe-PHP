@@ -14,13 +14,22 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   padding: 5px;
-  width: 20%;
+  width: 19%;
   float: left;
+}
+
+.dashboard-options a {
+  color: #FFF;
+}
+
+.dashboard-options a:hover {
+  text-decoration: underline;
 }
 
 .your-questions {
   border: 2px solid white;
   border-radius: 5px;
   padding: 5px;
-  width:
+  float: right;
+  width: 79%;
 }

@@ -37,7 +37,8 @@ class UsersController extends BaseController {
 
   public function postSignin() {
     if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
-      return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+      $userid = Auth::user()->id;
+      return Redirect::to("users/$userid/dashboard")->with('message', 'You are now logged in!');
     } else {
       return Redirect::to('users/login')
         ->with('message', 'Sorry! Your username/password combination was incorrect')
@@ -52,6 +53,10 @@ class UsersController extends BaseController {
   public function getLogout() {
     Auth::logout();
     return Redirect::to('users/login')->with('message', 'You logged out successfully!');
+  }
+
+  public function getShow() {
+    $this->layout->content = View::make('users.show');
   }
 
 }

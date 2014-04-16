@@ -2,7 +2,7 @@
 <p>Welcome to your Dashboard. You're awesome!</p>
 <div class="dashboard-options">
   <ul>
-    <a href="#">Send a link</a>
+    <a href="show">Send a link</a>
     <a href="#">Your links</a>
   </ul>
 </div>
