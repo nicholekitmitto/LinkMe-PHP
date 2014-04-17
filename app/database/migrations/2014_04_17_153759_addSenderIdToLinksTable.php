@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddLinksTable extends Migration {
+class AddSenderIdToLinksTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -13,18 +13,18 @@ class AddLinksTable extends Migration {
 	public function up()
 	{
 		Schema::table('links', function($table) {
-			$table->integer('recipient_id');
+			$table->integer('sender_id');
 		});
 	}
 
 	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
+	* Reverse the migrations.
+	*
+	* @return void
+	*/
 	public function down()
 	{
-		Schema::dropColumn('recipient_id');
+		Schema::dropColumn('sender_id');
 	}
 
 }

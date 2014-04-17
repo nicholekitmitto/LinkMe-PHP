@@ -8,6 +8,14 @@
   </ul>
 </div>
 <div class="your-questions">
-  <p>Your questions will be here</p>
+
+  @foreach ($links as $link)
+    <p>
+      <span class="message">{{$link->message}}</span>
+      <span class="link">{{$link->link}}</span>
+      <span class="sent-from">Sent from: {{User::getFullNameFromId($link->sender_id);}}</span>
+      </p>
+  @endforeach
+
   <a href="#" class="small round button">Open all in new tabs</a>
 </div>

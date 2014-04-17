@@ -56,4 +56,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	public function Links()
+		{
+				return $this->hasMany('links');
+		}
+
+	public static function getFirstNameFromId($id) {
+		return DB::table('users')->where('id', $id)->pluck('firstname');
+	}
+
+	public static function getLastNameFromId($id) {
+		return DB::table('users')->where('id', $id)->pluck('lastname');
+	}
+
+	public static function getFullNameFromId($id) {
+		return User::getFirstNameFromId($id) . " " . User::getLastNameFromId($id);
+	}
+
 }

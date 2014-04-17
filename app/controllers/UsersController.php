@@ -46,8 +46,9 @@ class UsersController extends BaseController {
     }
   }
 
-  public function getDashboard() {
-    $this->layout->content = View::make('users.dashboard');
+  public function getDashboard($id) {
+    $links = Links::getLinksByUserId($id);
+    $this->layout->content = View::make('users.dashboard', array('links' => $links));
   }
 
   public function getLogout() {
@@ -60,6 +61,7 @@ class UsersController extends BaseController {
 
     $this->layout->content = View::make('users.show', array('user' => $user));
   }
+
 
   public function getIndex() {
     $this->layout->content = View::make('users.index');

@@ -10,6 +10,10 @@ body {
   background-attachment: fixed;
 }
 
+.message, .link {
+  display: block;
+}
+
 .dashboard-options {
   border: 2px solid white;
   border-radius: 5px;

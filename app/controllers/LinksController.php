@@ -8,6 +8,7 @@ public function postCreate() {
     $link->message = Input::get('message');
     $link->link = Input::get('link');
     $link->recipient_id = Input::get('recipient_id');
+    $link->sender_id = Auth::user()->id;
     $link->save();
 
   if ($link) {
