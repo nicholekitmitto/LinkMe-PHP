@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'linkme',
-			'username'  => 'root',
-			'password'  => 'root',
+			'host'      => '127.0.0.1',
+			'database'  => 'nd_linkme',
+			'username'  => 'nichole',
+			'password'  => 'bumface',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

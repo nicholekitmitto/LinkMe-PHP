@@ -12,6 +12,11 @@
 */
 
 /*Route::controller('users', 'UsersController');*/
+Route::get('/', function()
+{
+    return Redirect::to('users/login');
+});
+
 Route::get('users/register', 'UsersController@getRegister');
 
 Route::post('users/create', 'UsersController@postCreate');
