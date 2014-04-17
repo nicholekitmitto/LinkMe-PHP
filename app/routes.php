@@ -14,7 +14,7 @@
 /*Route::controller('users', 'UsersController');*/
 Route::get('users/register', 'UsersController@getRegister');
 
-Route::get('users/create', 'UsersController@getCreate');
+Route::post('users/create', 'UsersController@postCreate');
 
 Route::get('users/login', 'UsersController@getLogin');
 
