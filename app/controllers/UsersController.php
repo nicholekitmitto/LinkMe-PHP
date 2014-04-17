@@ -48,6 +48,7 @@ class UsersController extends BaseController {
 
   public function getDashboard($id) {
     $links = Links::getLinksByUserId($id);
+    
     $this->layout->content = View::make('users.dashboard', array('links' => $links));
   }
 
