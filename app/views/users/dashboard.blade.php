@@ -2,8 +2,9 @@
 <p>Welcome to your Dashboard. You're awesome!</p>
 <div class="dashboard-options">
   <ul>
-    <a href="show">Send a link</a>
+    <a href="show">Your Profile</a>
     <a href="#">Your links</a>
+    <a href="/users/index">Users</a>
   </ul>
 </div>
 <div class="your-questions">

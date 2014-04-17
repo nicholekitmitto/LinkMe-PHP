@@ -61,23 +61,9 @@ class UsersController extends BaseController {
     $this->layout->content = View::make('users.show', array('user' => $user));
   }
 
-  /*public function postShow() {
-    $validator = Validator::make(Input::all(), User::$rules);
-
-    if ($validator->passes()) {
-      $links = new Link;
-      $links->message = Input::get('message');
-      $links->link = Input::get('link');
-      $links->save();
-
-      return Redirect::to('users/show')->with('message', 'Your link has been sent successfully!');
-    } else {
-      return Redirect::to('users/register')
-        ->with('message', 'Sorry! The following errors occured')
-        ->withErrors($validator)
-        ->withInput();
-    }
-  }*/
+  public function getIndex() {
+    $this->layout->content = View::make('users.index');
+  }
 
 }
 ?>

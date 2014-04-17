@@ -27,3 +27,5 @@ Route::get('users/logout', 'UsersController@getLogout');
 Route::get('users/{id}/show', 'UsersController@getShow');
 
 Route::post('users/{id}/links/create', 'LinksController@postCreate');
+
+Route::get('users/index', 'UsersController@getIndex');
