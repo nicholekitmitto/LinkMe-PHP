@@ -14,6 +14,13 @@ body {
   display: block;
 }
 
+.usernames {
+  display: block;
+  padding: 5px;
+  color: #FFF;
+  font-size: 1.5em;
+}
+
 .dashboard-options {
   border: 2px solid white;
   border-radius: 5px;
