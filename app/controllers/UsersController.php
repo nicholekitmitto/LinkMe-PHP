@@ -64,7 +64,9 @@ class UsersController extends BaseController {
 
 
   public function getIndex() {
-    $this->layout->content = View::make('users.index');
+    $users = User::getAllUsers();
+
+    $this->layout->content = View::make('users.index', array('users' => $users));
   }
 
 }
