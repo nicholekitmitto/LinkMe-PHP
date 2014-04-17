@@ -14,7 +14,11 @@
       <nav class="top-bar" data-topbar="">
         <ul class="title-area">
           <li class="name">
-            <h1><a href="dashboard">LinkMe</a></h1>
+            @if (Auth::check())
+            <h1><a href="/users/{{Auth::user()->id}}/dashboard">LinkMe</a></h1>
+            @else
+            <h1><a href="/login">LinkMe</a></h1>
+            @endif
           </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
           </li>
