@@ -10,8 +10,18 @@ body {
   background-attachment: fixed;
 }
 
-.message, .link {
+.individual-link {
+  border-bottom: 1px solid white;
+}
+
+.message, .link, .sent-from {
   display: block;
+  margin-left: 40px;
+}
+
+.link a {
+  color: #FFF;
+  text-decoration: underline;
 }
 
 .usernames {
@@ -25,12 +35,14 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   padding: 5px;
-  width: 19%;
+  width: 20%;
   float: left;
 }
 
-.dashboard-options a {
+.dashboard-options a, .dashboard-options li {
   color: #FFF;
+  list-style: none;
+  margin: 0 auto;
 }
 
 .dashboard-options a:hover {
@@ -42,5 +54,5 @@ body {
   border-radius: 5px;
   padding: 5px;
   float: right;
-  width: 79%;
+  width: 77%;
 }
