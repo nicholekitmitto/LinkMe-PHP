@@ -26,30 +26,41 @@
         <section class="top-bar-section">
 
           <!-- Right Nav Section -->
-          <ul class="right show-for-large-up">
-            @if(!Auth::check())
-              <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
-              <li>{{ HTML::link('users/register', 'Register') }}</li>
+        <ul class="right show-for-large-up">
+          @if(!Auth::check())
+          <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
+          <li>{{ HTML::link('users/register', 'Register') }}</li>
+          @else
+          <li class="active">{{ HTML::link('users/logout', 'Logout') }}</li>
+          @endif
+          <li class="has-dropdown not-click">
+            @if (Auth::check())
+            <a href="#">Hello, {{Auth::user()->firstname}}!</a>
             @else
-              <li class="active">{{ HTML::link('users/logout', 'Logout') }}</li>
-                @endif
-            <li class="has-dropdown not-click">
-              <a href="#">Hello</a>
-              </h1>
-              <ul class="dropdown">
-                <li class="title back js-generated">
-                  <h5><a href="javascript:void(0)">Back</a></h5>
-                </li>
-                <li><a href="#">My Profile</a>
-                </li>
-                <li>
-                  <a href="#">Edit Profile</a>
-                  <li>
-                    <li><a href="dashboard">Dashboard</a>
-                    </li>
-              </ul>
+            <a href="#">Hello!</a>
+            @endif
+            </h1>
+            <ul class="dropdown">
+              <li class="title back js-generated">
+                <h5><a href="javascript:void(0)">Back</a></h5>
               </li>
-          </ul>
+              @if (Auth::check())
+              <li>
+                <a href="#">My Profile</a>
+              </li>
+              <li>
+                <a href="#">Edit Profile</a>
+                <li>
+                  <li>
+                    <a href="/users/{{Auth::user()->id}}/dashboard">Dashboard</a>
+                  </li>
+                  @else
+                  <li>
+                  </li>
+                  @endif
+            </ul>
+            </li>
+        </ul>
 
           <ul class="right hide-for-large-up">
             <li class="active"><a href="#">Right Button</a>
