@@ -36,7 +36,7 @@ class UsersController extends BaseController {
   }
 
   public function postSignin() {
-    if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+    if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')), true)) {
       $userid = Auth::user()->id;
       return Redirect::to("users/$userid/dashboard")->with('message', 'You are now logged in!');
     } else {
@@ -48,7 +48,7 @@ class UsersController extends BaseController {
 
   public function getDashboard($id) {
     $links = Links::getLinksByUserId($id);
-    
+
     $this->layout->content = View::make('users.dashboard', array('links' => $links));
   }
 
@@ -69,6 +69,8 @@ class UsersController extends BaseController {
 
     $this->layout->content = View::make('users.index', array('users' => $users));
   }
+
+
 
 }
 ?>

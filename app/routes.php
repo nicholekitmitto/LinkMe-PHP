@@ -14,7 +14,11 @@
 /*Route::controller('users', 'UsersController');*/
 Route::get('/', function()
 {
+  if (Auth::check()) {
+    return Redirect::to('users/' . Auth::user()->id . '/dashboard');
+  } else {
     return Redirect::to('users/login');
+  }
 });
 
 Route::get('users/register', 'UsersController@getRegister');

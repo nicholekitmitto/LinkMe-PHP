@@ -26,6 +26,7 @@ class Links extends Eloquent {
     $links = DB::table('links')
              ->select('*')
              ->where("recipient_id", $id)
+             ->orderBy('created_at', 'desc')
              ->get();
     return $links;
   }
