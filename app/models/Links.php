@@ -36,7 +36,5 @@ class Links extends Eloquent {
         return $this->belongsTo('Links');
     }
 
-
-
 }
 ?>

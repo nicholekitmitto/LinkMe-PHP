@@ -15,6 +15,9 @@
       <span class="message">{{$link->message}}</span>
       <span class="link"><a href="{{$link->link}}">{{$link->link}}</a></span>
       <span class="sent-from">From: {{User::getFullNameFromId($link->sender_id);}}</span>
+      {{ Form::open(array('url'=>"users/$link->recipient_id/links/$link->id/viewed", 'class'=>'form-signup')) }}
+      {{ Form::submit('Mark As Viewed', array('class'=>'small round button'))}}
+  {{ Form::close() }}
       </p>
   @endforeach
 
