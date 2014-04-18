@@ -3,7 +3,7 @@
 <div class="dashboard-options">
   <ul>
     <li><a href="show">Your Profile</a></li>
-    <li><a href="#">Viewed links</a></li>
+    <li><a href="/users/{{Auth::user()->id}}/dashboardviewed">Viewed links</a></li>
     <li><a href="/users/index">All Users</a></li>
   </ul>
 </div>
