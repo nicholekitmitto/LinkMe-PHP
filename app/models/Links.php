@@ -32,7 +32,15 @@ class Links extends Eloquent {
     return $links;
   }
 
-
+public static function getViewedLinksByUserId($id) {
+  $oldLinks = DB::table('links')
+           ->select('*')
+           ->where("recipient_id", $id)
+           ->where("viewed", 1)
+           ->orderBy('created_at', 'desc')
+           ->get();
+  return $oldLinks;
+}
 
   public function User()
     {
