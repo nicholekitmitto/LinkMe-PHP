@@ -52,6 +52,12 @@ class UsersController extends BaseController {
     $this->layout->content = View::make('users.dashboard', array('links' => $links));
   }
 
+  public function getDashboardViewed($id) {
+    $oldLinks = Links::getViewedLinksByUserId($id);
+
+    $this->layout->content = View::make('users.dashboardviewed', array('oldLinks' => $oldLinks));
+  }
+
   public function getLogout() {
     Auth::logout();
     return Redirect::to('users/login')->with('message', 'You logged out successfully!');
