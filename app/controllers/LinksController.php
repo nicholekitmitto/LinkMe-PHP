@@ -34,6 +34,19 @@ class LinksController extends BaseController {
 
   }
 
+  public function postAllViewed($id) {
+    $link = DB::table('links')
+            ->where('recipient_id', $id)
+            ->update(array('viewed' => 1));
+
+    if ($link) {
+      return Redirect::back()->with('message', 'Your links were marked as viewed.');
+    } else {
+      return Redirect::back()
+        ->with('message', 'Woops! Something went wrong!');
+    }
+  }
+
 
 
 }

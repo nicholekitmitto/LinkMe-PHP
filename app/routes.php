@@ -41,4 +41,6 @@ Route::get('users/index', 'UsersController@getIndex');
 
 Route::post('users/{id}/links/{linkid}/viewed', 'LinksController@postViewed');
 
+Route::post('users/{id}/links/viewed', 'LinksController@postAllViewed');
+
 Route::get('users/{id}/dashboardviewed', 'UsersController@getDashboardViewed');

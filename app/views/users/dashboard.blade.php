@@ -22,5 +22,9 @@
       </p>
   @endforeach
 
+  {{ Form::open(array('url'=>"users/" . Auth::user()->id . "/links/viewed", 'class'=>'form-signup')) }}
+  {{ Form::submit('Mark All As Viewed', array('class'=>'mark small round button'))}}
+{{ Form::close() }}
+
   <a href="#" class="small round button">Open all in new tabs</a>
 </div>
