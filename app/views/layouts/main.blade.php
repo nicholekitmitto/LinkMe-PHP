@@ -7,6 +7,8 @@
     <title>LinkMe</title>
     {{ HTML::style('packages/foundation/css/foundation.min.css') }}
     {{ HTML::style('css/main.css')}}
+    {{ HTML::script('packages/foundation/js/foundation/foundation.js')}}
+    {{ HTML::script('packages/foundation/js/foundation/foundation.topbar.js')}}
     <script src="js/jquery-1.10.2.min.js"></script>
   </head>
 
