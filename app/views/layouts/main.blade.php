@@ -110,12 +110,13 @@
       </nav>
     </div>
 
-
-    <div class="small-8 large-centered columns">
+  <div class="row">
+    <div class="small-12 large-centered columns">
       @if(Session::has('message'))
       <p class="alert-box">{{ Session::get('message') }}</p>
       @endif
     </div>
       {{ $content }}
+  </div>
   </body>
 </html>

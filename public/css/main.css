@@ -9,11 +9,6 @@ body {
   background-attachment: fixed;
 }
 
-
-.individual-link {
-  border-bottom: 1px solid white;
-}
-
 .message, .link, .sent-from {
   display: block;
   margin-left: 40px;
@@ -48,12 +43,21 @@ body {
   color: #21A68D;
   border-bottom: 5px solid #21A68D;
   margin-bottom: -5px;
+  z-index: 10;
 }
 
 .your-questions {
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 5px;
-  float: right;
+  margin: 0 auto;
+  overflow: auto;
   width: 100%;
+}
+
+.individual-link {
+  border: 1px solid white;
+  padding: 5px;
+  width: 300px;
+  margin-right: 5px;
+  float: left;
+  display: inline-block;
+  overflow: auto;
 }
