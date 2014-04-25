@@ -4,18 +4,17 @@ html h1, h2, h3, h4, h5, h6, p {
 
 body {
   font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
-  background: #ECDECB;
+  background: #EBE3E0;
   background-position:center;
   background-attachment: fixed;
 }
 
 .message, .link, .sent-from {
   display: block;
-  margin-left: 40px;
 }
 
 .link a {
-  color: #FFF;
+  color: #F25749;
   text-decoration: underline;
 }
 
