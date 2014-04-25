@@ -3,8 +3,8 @@
     <h1>Dashboard</h1>
     <p>Welcome to your Dashboard. You're awesome!</p>
         {{ Form::open(array('url'=>"users/" . Auth::user()->id . "/links/viewed", 'class'=>'form-signup')) }}
-        {{ Form::submit('Mark All As Viewed', array('class'=>'mark small round button'))}}
-        <a href="#" class="small round button">Open all in new tabs</a>
+        {{ Form::submit('Mark All Viewed', array('class'=>'overall button'))}}
+        <a href="#" class="overall button">Open all in new tabs</a>
       {{ Form::close() }}
       <div class="row">
         <ul class="link-rows">
