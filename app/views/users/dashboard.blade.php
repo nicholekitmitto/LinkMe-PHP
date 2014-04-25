@@ -7,9 +7,9 @@
         <a href="#" class="small round button">Open all in new tabs</a>
       {{ Form::close() }}
       <div class="row">
-        <ul class="link-rows" data-equalizer>
+        <ul class="link-rows">
         @foreach ($links as $link)
-            <li class="individual-link" data-equalizer-watch>
+            <li class="individual-link">
               <span class="sent-on">{{date("F j, Y, g:i a", strtotime($link->created_at))}}</span>
               <span class="message">{{$link->message}}</span>
               <span class="link"><a href="{{$link->link}}">{{$link->link}}</a></span>
