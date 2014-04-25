@@ -116,6 +116,11 @@
       <p class="alert-box">{{ Session::get('message') }}</p>
       @endif
     </div>
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
       {{ $content }}
   </div>
   </body>
