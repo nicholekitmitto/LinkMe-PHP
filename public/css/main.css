@@ -1,14 +1,14 @@
 html h1, h2, h3, h4, h5, h6, p {
-  color: #FFF;
+  color: #000;
 }
 
 body {
-  background-image: url('../img/bg.jpg');
-  background-size: cover;
-  background-repeat:no-repeat;
+  font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
+  background: #ECDECB;
   background-position:center;
   background-attachment: fixed;
 }
+
 
 .individual-link {
   border-bottom: 1px solid white;
@@ -31,22 +31,23 @@ body {
   font-size: 1.5em;
 }
 
-.dashboard-options {
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 5px;
-  width: 20%;
-  float: left;
+.row {
+  width: 80%;
 }
 
-.dashboard-options a, .dashboard-options li {
-  color: #FFF;
-  list-style: none;
-  margin: 0 auto;
+.top-bar {
+  background: #4E3C51;
 }
 
-.dashboard-options a:hover {
-  text-decoration: underline;
+.top-bar-section li:not(.has-form) a:not(.button), .top-bar-section .has-dropdown .not-click {
+  background: #4E3C51;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background: #4E3C51;
+  color: #21A68D;
+  border-bottom: 5px solid #21A68D;
+  margin-bottom: -5px;
 }
 
 .your-questions {
@@ -54,5 +55,5 @@ body {
   border-radius: 5px;
   padding: 5px;
   float: right;
-  width: 77%;
+  width: 100%;
 }
