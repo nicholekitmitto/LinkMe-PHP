@@ -4,18 +4,21 @@ class LinksController extends BaseController {
 
   public function postCreate() {
 
-      $link = new Links;
-      $link->message = Input::get('message');
-      $link->link = Input::get('link');
-      $link->recipient_id = Input::get('recipient_id');
-      $link->sender_id = Auth::user()->id;
-      $link->save();
+      $validator = Validator::make(Input::all(), Links::$rules);
 
-    if ($link) {
+      if ($validator->passes()) {
+        $link = new Links;
+        $link->message = Input::get('message');
+        $link->link = Input::get('link');
+        $link->recipient_id = Input::get('recipient_id');
+        $link->sender_id = Auth::user()->id;
+        $link->save();
+        
       return Redirect::back()->with('message', 'Your link was sent successfully!');
     } else {
       return Redirect::back()
         ->with('message', 'Sorry! The following errors occured')
+        ->withErrors($validator)
         ->withInput();
     }
   }
