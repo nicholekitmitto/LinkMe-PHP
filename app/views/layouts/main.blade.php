@@ -8,10 +8,10 @@
     {{ HTML::style('packages/foundation/css/foundation.min.css') }}
     {{ HTML::style('css/main.css')}}
     {{ HTML::style('http://fonts.googleapis.com/css?family=Lato:300')}}
+    {{ HTML::script('packages/foundation/js/foundation/jquery-1.10.2.min.js')}}
     {{ HTML::script('packages/foundation/js/foundation/foundation.js')}}
     {{ HTML::script('packages/foundation/js/foundation/foundation.topbar.js')}}
-
-    <script src="js/jquery-1.10.2.min.js"></script>
+    {{ HTML::script('packages/foundation/js/foundation/foundation.equalizer.js')}}
   </head>
 
   <body>
