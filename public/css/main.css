@@ -4,9 +4,27 @@ html h1, h2, h3, h4, h5, h6, p {
 
 body {
   font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
-  background: #EBE3E0;
-  background-position:center;
-  background-attachment: fixed;
+/*  background: #EBE3E0;*/
+  background-image: url('../img/bg1.jpg');
+  background-position: center;
+  height: 100%;
+}
+
+.container {
+   min-height:100%;
+   position:relative;
+}
+
+.rowbody {
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+.footer-image {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
 }
 
 .message, .link, .sent-from {
