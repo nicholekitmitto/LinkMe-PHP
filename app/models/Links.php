@@ -2,10 +2,8 @@
 class Links extends Eloquent {
 
   public static $rules = array(
-      'message'=>'required|alpha|min:2',
-      'link'=>'required|alpha|min:2',
-      'recipient_id'=>'required|var|min:1',
-      'sender_id'=>'required|var|min:1'
+      'message'=>'alpha|min:2|max:250',
+      'link'=>'required|alpha|min:2'
       );
 
   /**
