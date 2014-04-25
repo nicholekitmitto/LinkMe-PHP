@@ -12,6 +12,7 @@
     {{ HTML::script('packages/foundation/js/foundation/foundation.js')}}
     {{ HTML::script('packages/foundation/js/foundation/foundation.topbar.js')}}
     {{ HTML::script('packages/foundation/js/foundation/foundation.equalizer.js')}}
+    {{ HTML::script('packages/foundation/js/foundation/isotope.pkgd.min.js')}}
   </head>
 
   <body>
