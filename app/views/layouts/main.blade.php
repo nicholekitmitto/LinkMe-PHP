@@ -110,8 +110,8 @@
         </section>
       </nav>
     </div>
-
-  <div class="row">
+<div class="container">
+  <div class="row rowbody">
     <div class="small-12 large-centered columns">
       @if(Session::has('message'))
       <p class="alert-box">{{ Session::get('message') }}</p>
@@ -124,5 +124,9 @@
     </ul>
       {{ $content }}
   </div>
+  <div class="footer-image">
+    <img src="/img/top.png">
+  </div>
+</div>
   </body>
 </html>
