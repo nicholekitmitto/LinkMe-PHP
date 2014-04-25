@@ -16,7 +16,7 @@
               <span class="sent-from">From: {{User::getFullNameFromId($link->sender_id);}}</span>
 
               {{ Form::open(array('url'=>"users/$link->recipient_id/links/$link->id/viewed", 'class'=>'mark-button')) }}
-              {{ Form::submit('Mark As Viewed', array('class'=>'mark small round button'))}}
+              {{ Form::submit('Mark As Viewed', array('class'=>'button'))}}
           {{ Form::close() }}
 
           </li>
