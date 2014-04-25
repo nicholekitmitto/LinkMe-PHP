@@ -25,9 +25,6 @@ body {
   font-size: 1.5em;
 }
 
-.row {
-  width: 80%;
-}
 
 .top-bar {
   background: #4E3C51;
@@ -45,18 +42,14 @@ body {
   z-index: 10;
 }
 
-.your-questions {
-  margin: 0 auto;
-  overflow: auto;
-  width: 100%;
-}
-
 .individual-link {
-  border: 1px solid white;
-  padding: 5px;
+  background: #EDD5D1;
+  padding: 15px;
   width: 300px;
-  margin-right: 5px;
-  float: left;
   display: inline-block;
-  overflow: auto;
+  word-wrap: break-word;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  margin-bottom: 15px;
+  line-height: 1.5em;
 }
