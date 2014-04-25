@@ -24,4 +24,15 @@
       </ul>
     </div>
   </div>
+  <script>
+  $(document).ready(function(){
+    var $container = $('.link-rows');
+    // init
+    $container.isotope({
+      // options
+      itemSelector: '.individual-link',
+      layoutMode: 'masonry'
+    });
+  });
+</script>
 </div>
