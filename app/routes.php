@@ -53,6 +53,10 @@ Route::post('users/{id}/links/viewed', 'LinksController@postAllViewed');
 
 Route::get('users/{id}/dashboardviewed', 'UsersController@getDashboardViewed');
 
+Route::get('users/{id}/updateprofile', 'UsersController@getUpdate');
+
+Route::post('users/{id}/update', 'UsersController@postUpdate');
+
 Route::get('migrate', function() {
   Artisan::call('migrate');
 });

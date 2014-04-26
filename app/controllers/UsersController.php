@@ -32,6 +32,33 @@ class UsersController extends BaseController {
     }
   }
 
+  public function getUpdate($id) {
+    $user = User::findOrFail($id);
+
+    $this->layout->content = View::make('users.updateprofile',  array('user' => $user));
+  }
+
+  public function postUpdate($id) {
+
+      $user = User::findOrFail($id);
+      $user->firstname = Input::get('firstname');
+      $user->lastname = Input::get('lastname');
+      $user->email = Input::get('email');
+      $user->password = Hash::make(Input::get('password'));
+      $user->bio = Input::get('bio');
+      $user->location = Input::get('location');
+      $user->occupation = Input::get('occupation');
+      $user->save();
+    if ($user) {
+
+      return Redirect::to('users/' . Auth::user()->id . '/show')->with('message', 'Your profile has been updated!');
+    } else {
+      return Redirect::back()
+        ->with('message', 'Sorry! The following errors occured')
+        ->withInput();
+    }
+  }
+
   public function getLogin() {
     $this->layout->content = View::make('users.login');
   }
