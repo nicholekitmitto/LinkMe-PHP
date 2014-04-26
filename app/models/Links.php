@@ -2,8 +2,8 @@
 class Links extends Eloquent {
 
   public static $rules = array(
-      'message'=>'alpha|min:2|max:250',
-      'link'=>'required|alpha|min:2'
+      'message'=>'min:2|max:250',
+      'link'=>'required|min:2'
       );
 
   /**
