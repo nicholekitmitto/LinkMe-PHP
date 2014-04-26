@@ -39,7 +39,7 @@
           <li>{{ HTML::link('users/register', 'Register') }}</li>
           @else
           <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
-          <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
+          <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
           @endif
           <li class="has-dropdown not-click">
             @if (Auth::check())
@@ -59,14 +59,12 @@
               <li>
                 <a href="#">Edit Profile</a>
                 <li>
-                  <li>
-                    <a href="/users/{{Auth::user()->id}}/dashboard">Dashboard</a>
-                  </li>
-                  <li>{{ HTML::link('users/logout', 'Logout') }}</li>
-                  @else
-                  <li>
-                  </li>
-                  @endif
+                <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
+                <li>{{ HTML::link('users/logout', 'Logout') }}</li>
+                @else
+                <li>
+                </li>
+                @endif
             </ul>
             </li>
         </ul>
@@ -77,7 +75,7 @@
             <li>{{ HTML::link('users/register', 'Register') }}</li>
             @else
             <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
-            <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
+            <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
             @endif
             <li class="has-dropdown not-click">
               @if (Auth::check())
@@ -90,9 +88,7 @@
                   <h5><a href="javascript:void(0)">Back</a></h5>
                 </li>
                 @if (Auth::check())
-                <li>
-                  <a href="/users/{{Auth::user()->id}}/dashboard">Dashboard</a>
-                </li>
+                <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
                 <li>
                   <a href="#">My Profile</a>
                 </li>
