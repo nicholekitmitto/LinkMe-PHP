@@ -27,6 +27,10 @@ body {
   width: 100%;
 }
 
+.footer-image img {
+  width: 100%;
+}
+
 .message, .link, .sent-from {
   display: block;
 }
