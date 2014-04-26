@@ -21,6 +21,14 @@ Route::get('/', function()
   }
 });
 
+Route::filter('isOwnUser', function()
+{
+    if (Route::Input('id') != Auth::user()->id) {
+        return Redirect::to('users/' . Auth::user()->id . '/dashboard')
+        ->with('message', "Sorry! You don't have permissions to view that page!");
+    }
+});
+
 Route::get('users/register', 'UsersController@getRegister');
 
 Route::post('users/create', 'UsersController@postCreate');
