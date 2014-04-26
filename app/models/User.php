@@ -31,8 +31,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return mixed
 	 */
-	public function getAuthIdentifier()
-	{
+	public function getAuthIdentifier() {
 		return $this->getKey();
 	}
 
@@ -41,8 +40,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getAuthPassword()
-	{
+	public function getAuthPassword() {
 		return $this->password;
 	}
 
@@ -51,8 +49,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getReminderEmail()
-	{
+	public function getReminderEmail() {
 		return $this->email;
 	}
 
@@ -71,10 +68,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    return 'remember_token';
 	}
 
-	public function Links()
-		{
-				return $this->hasMany('links');
-		}
+	public function Links() {
+		return $this->hasMany('links');
+	}
 
 	public static function getFirstNameFromId($id) {
 		return DB::table('users')->where('id', $id)->pluck('firstname');
@@ -89,7 +85,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	public static function getAllUsers() {
-		return DB::table('users')->get();
+		return DB::table('users')
+							 ->orderBy('firstname', 'asc')
+							 ->get();
 	}
 
 }

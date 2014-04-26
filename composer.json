@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"zurb/foundation": "*"
+		"zurb/foundation": "*",
+    "thomaswelton/laravel-gravatar": "0.0.x"
+
 	},
 	"autoload": {
 		"classmap": [
