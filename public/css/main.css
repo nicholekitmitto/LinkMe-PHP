@@ -58,10 +58,17 @@ body {
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
   background: #65aea7;
-  color: #21A68D;
-  border-bottom: 5px solid #21A68D;
+  border-bottom: 4px solid #FFF;
   margin-bottom: -5px;
   z-index: 10;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):last-child {
+  border-bottom: none;
+}
+
+.top-bar-section ul li:hover:not(.has-form)>a {
+  background: #65aea7;
 }
 
 .individual-link {
