@@ -3,6 +3,7 @@ class UsersController extends BaseController {
   public function __construct() {
     $this->beforeFilter('csrf', array('on'=>'post'));
     $this->beforeFilter('auth', array('only'=>array('getDashboard')));
+    $this->beforeFilter('isOwnUser', array('only'=>array('getDashboard', 'getDashboardViewed')));
   }
 
   protected $layout = "layouts.main";
