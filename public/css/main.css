@@ -50,10 +50,13 @@ body {
 
 .top-bar {
   background: #65aea7;
+  height: 49px;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section .has-dropdown .not-click {
   background: #65aea7;
+  font-size: 1em;
+  font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -65,6 +68,15 @@ body {
 
 .top-bar-section ul li:hover:not(.has-form)>a {
   background: #65aea7;
+}
+
+.top-bar-section ul {
+  background: transparent;
+}
+
+.top-bar .name h1 a {
+  font-size: 1.5em;
+  font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
 }
 
 .individual-link {

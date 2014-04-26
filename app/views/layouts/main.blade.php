@@ -38,8 +38,8 @@
           <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
           <li>{{ HTML::link('users/register', 'Register') }}</li>
           @else
+          <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
           <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
-          <li>{{ HTML::link('/users/index', 'All Users')}}</li>
           @endif
           <li class="has-dropdown not-click">
             @if (Auth::check())
@@ -76,8 +76,8 @@
             <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
             <li>{{ HTML::link('users/register', 'Register') }}</li>
             @else
+            <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
             <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
-            <li>{{ HTML::link('/users/index', 'All Users')}}</li>
             @endif
             <li class="has-dropdown not-click">
               @if (Auth::check())
