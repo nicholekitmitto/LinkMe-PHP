@@ -13,7 +13,7 @@ class LinksController extends BaseController {
         $link->recipient_id = Input::get('recipient_id');
         $link->sender_id = Auth::user()->id;
         $link->save();
-        
+
       return Redirect::back()->with('message', 'Your link was sent successfully!');
     } else {
       return Redirect::back()
@@ -49,6 +49,7 @@ class LinksController extends BaseController {
         ->with('message', 'Woops! Something went wrong!');
     }
   }
+
 
 
 

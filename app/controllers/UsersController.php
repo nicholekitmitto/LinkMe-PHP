@@ -97,6 +97,11 @@ class UsersController extends BaseController {
     $this->layout->content = View::make('users.show', array('user' => $user));
   }
 
+  public function getSendLink($id) {
+    $user = User::findOrFail($id);
+
+    $this->layout->content = View::make('users.sendlink', array('user' => $user));
+  }
 
   public function getIndex() {
     $users = User::getAllUsers();
