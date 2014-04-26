@@ -1,3 +1,11 @@
+@if (empty($links))
+<div class="row">
+  <div class="large-7 columns">
+    <h1>Dashboard</h1>
+    <p>Welcome to your Dashboard. You're awesome!</p>
+    <h1>Looks like you don't have any links!</h1>
+  </div>
+@else
 <div class="row">
   <div class="large-7 columns">
     <h1>Dashboard</h1>
@@ -9,6 +17,7 @@
     {{ Form::close() }}
     <a href="#" class="overall button">Open all in new tabs</a>
   </div>
+@endif
 </div>
 <div class="row">
   <div class="small-12 large-centered columns">
@@ -24,10 +33,10 @@
               {{ Form::open(array('url'=>"users/$link->recipient_id/links/$link->id/viewed", 'class'=>'mark-button')) }}
               {{ Form::submit('Mark As Viewed', array('class'=>'button'))}}
           {{ Form::close() }}
-
-          </li>
+            </li>
         @endforeach
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
   <script>
@@ -41,4 +50,3 @@
     });
   });
 </script>
-</div>
