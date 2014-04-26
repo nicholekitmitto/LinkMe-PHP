@@ -6,7 +6,7 @@
           @foreach ($users as $user)
             <li class="individual-card">
               <a href="{{$user->id}}/show" class="usernames">
-              {{$user->firstname}} {{$user->lastname}} 
+              {{Gravatar::image($user->email)}} {{$user->firstname}} {{$user->lastname}}
               </a>
             </li>
           @endforeach
@@ -14,14 +14,3 @@
       </div>
   </div>
 </div>
-<script>
-$(document).ready(function(){
-  var $container = $('.users-list');
-  // init
-  $container.isotope({
-    // options
-    itemSelector: '.individual-card',
-    layoutMode: 'masonry'
-  });
-});
-</script>
