@@ -63,10 +63,6 @@ body {
   z-index: 10;
 }
 
-.top-bar-section li:not(.has-form) a:not(.button):last-child {
-  border-bottom: none;
-}
-
 .top-bar-section ul li:hover:not(.has-form)>a {
   background: #65aea7;
 }
