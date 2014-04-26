@@ -54,10 +54,10 @@
               </li>
               @if (Auth::check())
               <li>
-                <a href="#">My Profile</a>
+                <a href="/users/{{Auth::user()->id}}/show">My Profile</a>
               </li>
               <li>
-                <a href="#">Edit Profile</a>
+                <a href="/users/{{Auth::user()->id}}/updateprofile">Edit Profile</a>
                 <li>
                 <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
                 <li>{{ HTML::link('users/logout', 'Logout') }}</li>
@@ -90,10 +90,10 @@
                 @if (Auth::check())
                 <li>{{ HTML::link("users/" . Auth::user()->id . "/dashboardviewed", 'Viewed links')}}</li>
                 <li>
-                  <a href="#">My Profile</a>
+                  <a href="/users/{{Auth::user()->id}}/show">My Profile</a>
                 </li>
                 <li>
-                  <a href="#">Edit Profile</a>
+                  <a href="/users/{{Auth::user()->id}}/updateprofile">Edit Profile</a>
                 </li>
                 <li>{{ HTML::link('users/logout', 'Logout') }}</li>
                 @else
