@@ -100,13 +100,22 @@ body {
   background: transparent;
   font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
   font-weight: bold;
-  width: 170px;
+  width: auto;
   padding: 10px;
 }
 
+.mark-all-button {
+  display: inline-block;
+  margin-top: 25px;
+}
+
 .overall {
-  background: #595959;
+  background-image: url('../img/linkbg.jpg');
   border: none;
+}
+
+.overall:hover {
+  background: #FFF;
 }
 
 .button:hover {
