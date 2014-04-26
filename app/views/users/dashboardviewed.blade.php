@@ -4,7 +4,7 @@
 <div class="row">
   <ul class="link-rows">
     @foreach ($oldLinks as $link)
-      <li class="individual-link">
+      <li class="individual-card">
         <span class="sent-on">{{date("F j, Y, g:i a", strtotime($link->created_at))}}</span>
         <span class="message">{{$link->message}}</span>
         <span class="link"><a href="{{$link->link}}">{{$link->link}}</a></span>
@@ -19,7 +19,7 @@ $(document).ready(function(){
   // init
   $container.isotope({
     // options
-    itemSelector: '.individual-link',
+    itemSelector: '.individual-card',
     layoutMode: 'masonry'
   });
 });

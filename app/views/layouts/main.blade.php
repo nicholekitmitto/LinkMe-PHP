@@ -38,7 +38,7 @@
           <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
           <li>{{ HTML::link('users/register', 'Register') }}</li>
           @else
-          <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
+          <li class="send">{{ HTML::link('/users/index', 'Send a Link')}}</li>
           <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
           @endif
           <li class="has-dropdown not-click">
@@ -74,7 +74,7 @@
             <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
             <li>{{ HTML::link('users/register', 'Register') }}</li>
             @else
-            <li class="send">{{ HTML::link('/users/index', 'Send A Link')}}</li>
+            <li class="send">{{ HTML::link('/users/index', 'Send a Link')}}</li>
             <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
             @endif
             <li class="has-dropdown not-click">
