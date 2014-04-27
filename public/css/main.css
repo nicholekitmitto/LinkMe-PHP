@@ -122,3 +122,12 @@ body {
   background-color: #FFF;
   color: #333;
 }
+
+
+.bold {
+  font-size: 1.4375rem;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}

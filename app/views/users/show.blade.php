@@ -6,35 +6,30 @@
     @if ($user->id != Auth::user()->id)
       <div class="small-9 small-centered large-uncentered columns">
         <a href="/users/{{$user->id}}/sendlink" class="overall button">Send {{$user->firstname}} a link</a>
-        <p>
-        <h4>
-          Lives in:
-        </h4>
-            {{$user->location}}
-        </p>
-        <p>
-          Occupation: {{$user->occupation}}
-        </p>
-        <p>
-          About {{$user->firstname}}: {{$user->bio}}
-        </p>
-      </div>
     @else
       <div class="small-9 small-centered large-uncentered columns">
         <a href="/users/{{Auth::user()->id}}/updateprofile" class="overall button">Update your profile</a>
-        <p>
-        <h4>
-          Lives in:
-        </h4>
-            {{$user->location}}
-        </p>
-        <p>
-          Occupation: {{$user->occupation}}
-        </p>
-        <p>
-          About {{$user->firstname}}: {{$user->bio}}
-        </p>
-      </div>
     @endif
+          <div class="profile-section">
+            <span class="bold">
+              Lives in:
+            </span>
+                {{$user->location}}
+          </div>
+
+          <div class="profile-section">
+          <span class="bold">
+            Occupation:
+          </span>
+            {{$user->occupation}}
+          </div>
+
+          <div class="profile-section">
+          <span class="bold">
+            About {{$user->firstname}}:
+          </span>
+            <p> {{$user->bio}}</p>
+          </div>
+      </div>
   </div>
 </div>
