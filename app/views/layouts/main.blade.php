@@ -19,7 +19,7 @@
             @if (Auth::check())
             <h1><a href="/users/{{Auth::user()->id}}/dashboard">LinkMe</a></h1>
             @else
-            <h1><a href="/login">LinkMe</a></h1>
+            <h1><a href="/users/login">LinkMe</a></h1>
           </li>
           @endif
           <li class="toggle-topbar menu-icon">

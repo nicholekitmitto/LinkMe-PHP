@@ -17,7 +17,7 @@ body {
 }
 
 .rowbody {
-  padding: 10px;
+/*  padding: 10px;*/
   padding-bottom: 60px;
 }
 
@@ -45,6 +45,28 @@ body {
 
 .login-content h1, h2, h3, h4, h5, p {
   color: #FFF;
+  font-family: "Lato", "HelveticaNeue", Helvetica, sans-serif;
+}
+
+.landing {
+  background-image: url('../img/catbg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.landing-main {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.no-account-skew {
+  background-image: url('../img/bg1.jpg');
+  width: 100%;
+  margin-top: 20%;
 }
 
 .message, .link, .sent-from {
