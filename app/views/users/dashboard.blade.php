@@ -29,23 +29,12 @@
               <span class="message">{{$link->message}}</span>
               <span class="link"><a href="/users/{{Auth::user()->id}}/links/{{$link->id}}/view" target="_blank">{{$link->link}}</a></span>
               <span class="sent-from">From: {{User::getFullNameFromId($link->sender_id);}}</span>
-              {{ Form::open(array('url'=>"users/$link->recipient_id/links/$link->id/viewed", 'class'=>'mark-button')) }}
+<!--               {{ Form::open(array('url'=>"users/$link->recipient_id/links/$link->id/viewed", 'class'=>'mark-button')) }}
               {{ Form::submit('Mark As Viewed', array('class'=>'button'))}}
-          {{ Form::close() }}
+          {{ Form::close() }} -->
             </li>
         @endforeach
         </ul>
       </div>
     </div>
   </div>
-  <script>
-  $(document).ready(function(){
-    var $container = $('.link-rows');
-    // init
-    $container.isotope({
-      // options
-      itemSelector: '.individual-card',
-      layoutMode: 'masonry'
-    });
-  });
-</script>

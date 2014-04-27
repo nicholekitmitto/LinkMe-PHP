@@ -8,11 +8,6 @@
     {{ HTML::style('packages/foundation/css/foundation.min.css') }}
     {{ HTML::style('css/main.css')}}
     {{ HTML::style('http://fonts.googleapis.com/css?family=Lato:300')}}
-    {{ HTML::script('packages/foundation/js/foundation/jquery-1.10.2.min.js')}}
-    {{ HTML::script('packages/foundation/js/foundation/foundation.js')}}
-    {{ HTML::script('packages/foundation/js/foundation/foundation.topbar.js')}}
-    {{ HTML::script('packages/foundation/js/foundation/foundation.equalizer.js')}}
-    {{ HTML::script('packages/foundation/js/foundation/isotope.pkgd.min.js')}}
   </head>
 
   <body>
@@ -124,5 +119,12 @@
     <img src="/img/top.png">
   </div>
 </div>
+
+{{ HTML::script('packages/foundation/js/foundation/jquery-1.10.2.min.js')}}
+{{ HTML::script('packages/foundation/js/foundation/foundation.js')}}
+{{ HTML::script('packages/foundation/js/foundation/foundation.topbar.js')}}
+{{ HTML::script('packages/foundation/js/foundation/foundation.equalizer.js')}}
+{{ HTML::script('packages/foundation/js/foundation/isotope.pkgd.min.js')}}
+{{ HTML::script('js/main.js')}}
   </body>
 </html>
