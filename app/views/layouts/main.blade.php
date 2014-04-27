@@ -7,6 +7,7 @@
     <title>LinkMe</title>
     {{ HTML::style('packages/foundation/css/foundation.min.css') }}
     {{ HTML::style('css/main.css')}}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     {{ HTML::style('http://fonts.googleapis.com/css?family=Lato:300')}}
   </head>
 
