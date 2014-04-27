@@ -14,7 +14,7 @@
     {{ Form::open(array('url'=>"users/" . Auth::user()->id . "/links/viewed", 'class'=>'mark-all-button')) }}
     {{ Form::submit('Mark All Viewed', array('class'=>'overall button'))}}
   {{ Form::close() }}
-  <a href="#" class="overall button">Open all in new tabs</a>
+  <a href="#" class="overall button openAll">Open all in new tabs</a>
 </div>
 @endif
 </div>
