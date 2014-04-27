@@ -1,3 +1,4 @@
+<div class="row">
 @if (empty($links))
 <div class="large-9 columns">
   <h1>Dashboard</h1>
@@ -36,3 +37,4 @@
       </ul>
     </div>
   </div>
+</div>

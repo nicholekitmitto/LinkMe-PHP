@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div>
+    <div class="fixed">
       <nav class="top-bar" data-topbar="">
         <ul class="title-area">
           <li class="name">
@@ -96,7 +96,7 @@
               @if (Auth::check())
               <a href="#">Hello, {{Auth::user()->firstname}}!</a>
               @else
-              
+
               @endif
               <ul class="dropdown">
                 <li class="title back js-generated">
@@ -121,8 +121,9 @@
         </section>
       </nav>
     </div>
+
 <div class="container">
-  <div class="row rowbody">
+  <div class="rowbody">
     <div class="large-12 large-centered columns">
       @if(Session::has('message'))
       <p class="alert-box">{{ Session::get('message') }}</p>

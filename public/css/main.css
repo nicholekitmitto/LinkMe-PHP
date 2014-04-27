@@ -11,13 +11,19 @@ body {
 }
 
 .container {
-   min-height:100%;
-   position:relative;
+  margin-top: 50px;
+  min-height:100%;
+  position:relative;
 }
 
 .rowbody {
   padding: 10px;
   padding-bottom: 60px;
+}
+
+.alert-box {
+  width: 83%;
+  margin: 0 auto;
 }
 
 .footer-image {
@@ -29,6 +35,16 @@ body {
 
 .footer-image img {
   width: 100%;
+}
+
+.login-row {
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin-top: -30px;
+}
+
+.login-content h1, h2, h3, h4, h5, p {
+  color: #FFF;
 }
 
 .message, .link, .sent-from {
