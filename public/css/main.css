@@ -131,3 +131,14 @@ body {
 .profile-section {
   margin-bottom: 20px;
 }
+
+.right-hand {
+  float: left;
+  display: inline-block;
+}
+
+.right-button {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 15px 15px 20px 15px;
+}
