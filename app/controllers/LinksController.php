@@ -34,7 +34,19 @@ class LinksController extends BaseController {
       return Redirect::back()
         ->with('message', 'Woops! Something went wrong!');
     }
+  }
 
+  public function getVisitAndViewed($id, $linkid) {
+    $link = Links::find($linkid);
+    $link->viewed = 1;
+    $link->save();
+
+    if ($link) {
+      return Redirect::to($link->link);
+    } else {
+      return Redirect::back()
+        ->with('message','Woops! Something went wrong!');
+    }
   }
 
   public function postAllViewed($id) {
