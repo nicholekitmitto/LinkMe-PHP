@@ -42,7 +42,7 @@ class LinksController extends BaseController {
     $link->save();
 
     if ($link) {
-      return Redirect::to($link->link);
+      return Redirect::to($link->link)->with('message', 'Your link was marked as viewed.');
     } else {
       return Redirect::back()
         ->with('message','Woops! Something went wrong!');

@@ -6,4 +6,9 @@ $(document).ready(function(){
     itemSelector: '.individual-card',
     layoutMode: 'masonry'
   });
+
+  $(".link").on( "click", function() {
+    $(this).parent().hide();
+});
+
 });
