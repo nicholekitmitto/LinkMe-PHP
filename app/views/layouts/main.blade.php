@@ -103,7 +103,7 @@
     </div>
 <div class="container">
   <div class="row rowbody">
-    <div class="small-12 large-centered columns">
+    <div class="large-12 large-centered columns">
       @if(Session::has('message'))
       <p class="alert-box">{{ Session::get('message') }}</p>
       @endif
