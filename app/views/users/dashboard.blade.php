@@ -1,6 +1,6 @@
 @if (empty($links))
 <div class="row">
-  <div class="large-7 columns">
+  <div class="large-9 columns">
     <h1>Dashboard</h1>
     <p>Welcome to your Dashboard. You're awesome!</p>
     <h1>Looks like you don't have any links!</h1>
