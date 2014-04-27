@@ -77,8 +77,17 @@
 
           <ul class="right hide-for-large-up">
             @if(!Auth::check())
-            <li class="active">{{ HTML::link('users/login', 'Login') }}</li>
-            <li>{{ HTML::link('users/register', 'Register') }}</li>
+            {{ Form::open(array('url'=>'users/signin', 'class'=>'')) }}
+            <li>
+              {{ Form::text('email', null, array('class'=>'input-block-level', 'placeholder'=>'Email Address')) }}
+            </li>
+            <li>
+              {{ Form::password('password', array('class'=>'input-block-level', 'placeholder'=>'Password')) }}
+            </li>
+            <li>
+              {{ Form::submit('Login', array('class'=>'overall button right-button'))}}
+          {{ Form::close() }}
+            </li>
             @else
             <li class="send">{{ HTML::link('/users/index', 'Send a Link')}}</li>
             <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
@@ -87,7 +96,7 @@
               @if (Auth::check())
               <a href="#">Hello, {{Auth::user()->firstname}}!</a>
               @else
-              <a href="#">Hello!</a>
+              
               @endif
               <ul class="dropdown">
                 <li class="title back js-generated">
