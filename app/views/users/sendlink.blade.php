@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-8 large-centered columns">
-    <a href="{{$user->id}}/show" class="overall button">Back to {{$user->firstname}}'s Profile</a>
+    <a href="/users/{{$user->id}}/show" class="overall button">Back to {{$user->firstname}}'s Profile</a>
     <h1>Send {{$user->firstname}} {{$user->lastname}} a link</h1>
     {{ Form::open(array('url'=>"users/$user->id/links/create", 'class'=>'form-signup')) }}
     {{ Form::text('link', null, array('class'=>'input-block-level', 'placeholder'=>'Enter the link here')) }}
