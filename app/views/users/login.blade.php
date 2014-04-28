@@ -3,7 +3,7 @@
     <div class="login-row">
       <div class="small-12 columns login-content">
         <div class="landing-main">
-          <h1>Share your favourite cats with your favourite people</h1>
+          <h1>From Kittens to Kaiju, share your favourite things with your favourite people</h1>
           <a href="/users/register" class="button">Start Linking</a>
         </div>
         <div class="no-account-skew">
