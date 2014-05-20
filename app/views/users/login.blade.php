@@ -6,10 +6,6 @@
           <h1>From Kittens to Kaiju, share your favourite things with your favourite people</h1>
           <a href="/users/register" class="button">Start Linking</a>
         </div>
-        <div class="no-account-skew">
-          <h1>No Account?</h1>
-          <p>Sign up for one <a href="/users/register">now!</a></p>
-        </div>
       </div>
     </div>
 <!--   </div> -->

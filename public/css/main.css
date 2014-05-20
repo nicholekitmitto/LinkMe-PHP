@@ -63,12 +63,6 @@ body {
   margin-top: 100px;
 }
 
-.no-account-skew {
-  background-image: url('../img/bg1.jpg');
-  width: 100%;
-  margin-top: 20%;
-}
-
 .message, .link, .sent-from {
   display: block;
 }
