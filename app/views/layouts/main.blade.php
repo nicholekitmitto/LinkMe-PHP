@@ -44,7 +44,19 @@
           </li>
 <!--           <li>{{ HTML::link('users/register', 'Register') }}</li> -->
           @else
-          <li class="send">{{ HTML::link('/users/index', 'Send a Link')}}</li>
+          <li class="has-dropdown not-click">
+            <a href="#">Send a Link</a>
+            <ul class="dropdown">
+              @foreach ($users as $user)
+                <li>
+                  <a href="/users/{{$user->id}}/sendlink" class="usernames">
+                    {{$user->firstname}} {{$user->lastname}}
+                  </a>
+                </li>
+              @endforeach
+            </ul>
+          </li>
+          <li>{{ HTML::link('/users/index', 'All Users')}}</li>
           <li>{{ HTML::link("/users/" . Auth::user()->id . "/dashboard", 'Home')}}</li>
           @endif
           <li class="has-dropdown not-click">
