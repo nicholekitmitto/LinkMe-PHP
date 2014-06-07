@@ -33,6 +33,10 @@ body {
   width: 100%;
 }
 
+.landing .footer-image {
+  display: none;
+}
+
 .footer-image img {
   width: 100%;
 }
